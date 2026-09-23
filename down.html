@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download BolEnglish AI App for Android</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card: rgba(26, 34, 53, 0.7);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --highlight: #fb923c;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #1e293b, var(--bg));
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 16px;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 40px 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .app-logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 28px;
+      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.35);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    h1 span.bol { color: var(--highlight); }
+    h1 span.eng { color: var(--accent); }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-top: 8px;
+      max-width: 580px;
+    }
+
+    .cta-area {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.15rem;
+      padding: 16px 36px;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(56, 189, 248, 0.6);
+    }
+
+    .meta-badge {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* Screenshots Section */
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .shots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .mockup-card {
+      background: #1e293b;
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .mockup-header {
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .bubble {
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .user-bubble {
+      background: #2563eb;
+      color: white;
+      align-self: flex-end;
+      border-bottom-right-radius: 2px;
+    }
+
+    .ai-bubble {
+      background: #334155;
+      color: #f8fafc;
+      align-self: flex-start;
+      border-bottom-left-radius: 2px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* Installation Steps */
+    .steps-box {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 24px;
+      backdrop-filter: blur(12px);
+    }
+
+    .steps-list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      background: var(--accent);
+      color: #0f172a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .step-text {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    .step-text strong {
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- Main Hero Card -->
+  <div class="hero">
+    <!-- Inline Official App Logo -->
+    <svg class="app-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#0f172a" />
+          <stop offset="100%" stop-color="#0284c7" />
+        </linearGradient>
+        <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#fb923c" />
+          <stop offset="100%" stop-color="#ea580c" />
+        </linearGradient>
+      </defs>
+      <rect width="512" height="512" rx="115" fill="#0f172a"/>
+      <path d="M 130 140 C 130 105, 382 105, 382 140 L 382 250 C 382 285, 230 285, 210 305 L 170 335 L 180 285 C 140 285, 130 270, 130 250 Z" fill="#38bdf8"/>
+      <path d="M 285 240 C 285 215, 410 215, 410 240 L 410 310 C 410 330, 340 330, 325 345 L 300 365 L 305 330 C 285 330, 285 320, 285 310 Z" fill="url(#orangeGrad)"/>
+      <g stroke="#0f172a" stroke-width="10" stroke-linecap="round">
+        <line x1="210" y1="185" x2="210" y2="205" />
+        <line x1="235" y1="170" x2="235" y2="220" />
+        <line x1="260" y1="155" x2="260" y2="235" stroke="#ffffff" stroke-width="12" />
+        <line x1="285" y1="170" x2="285" y2="220" />
+        <line x1="310" y1="185" x2="310" y2="205" />
+      </g>
+      <text x="256" y="425" font-family="sans-serif" font-size="52" font-weight="900" text-anchor="middle">
+        <tspan fill="#fb923c">BOL</tspan><tspan fill="#38bdf8">ENGLISH</tspan>
+      </text>
+    </svg>
+
+    <h1><span class="bol">Bol</span><span class="eng">English</span> AI Tutor</h1>
+    <p class="tagline">Learn fluent spoken English through Hindi & Hinglish explanations, instant live grammar correction, and native audio pronunciation.</p>
+
+    <div class="cta-area">
+      <!-- Direct Download Anchor Tag -->
+      <a href="bolenglish.apk" download="BolEnglish.apk" class="btn-download">
+        <span>⬇️ Download APK</span>
+      </a>
+      <span class="meta-badge">Android 7.0+ • Free Direct APK Download</span>
+    </div>
+  </div>
+
+  <!-- Interactive Mockups / Feature Photos -->
+  <div>
+    <div class="section-title">📱 Live App Features</div>
+    <div class="shots-grid">
+      
+      <!-- Preview 1 -->
+      <div class="mockup-card">
+        <span class="mockup-header">1. Real-time Grammar Correction</span>
+        <div class="bubble user-msg">I goes to school yesterday.</div>
+        <div class="bubble ai-msg">
+          💡 <strong>Correction:</strong> I <u>went</u> to school yesterday.<br>
+          📌 <strong>Why:</strong> Yesterday past tense है, इसलिए 'went' इस्तेमाल होगा।
+        </div>
+      </div>
+
+      <!-- Preview 2 -->
+      <div class="mockup-card">
+        <span class="mockup-header">2. Interactive Spoken Practice</span>
+        <div class="bubble user-msg">How do I order tea politely?</div>
+        <div class="bubble ai-msg">
+          You can say:<br>
+          <em>"Could I please get a cup of tea?"</em><br><br>
+          🔊 <em>Click Listen to hear native accent!</em>
+        </div>
+      </div>
+
+      <!-- Preview 3 -->
+      <div class="mockup-card">
+        <span class="mockup-header">3. Bilingual Vocabulary</span>
+        <div class="bubble user-msg">Meaning of "Relentless"?</div>
+        <div class="bubble ai-msg">
+          <strong>Hindi:</strong> अथक / जो कभी न रुके<br>
+          <strong>Example:</strong> "His relentless hard work made him successful."
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Installation Instructions -->
+  <div class="steps-box">
+    <div class="section-title">⚙️ Installation Guide</div>
+    <ul class="steps-list">
+      <li class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-text">Click the <strong>Download APK</strong> button above to download <code>BolEnglish.apk</code> directly to your device.</div>
+      </li>
+      <li class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-text">Open the downloaded file from your Notifications or your device's <strong>Downloads</strong> folder.</div>
+      </li>
+      <li class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-text">If prompted with <em>"Install unknown apps"</em>, navigate to settings and tap <strong>Allow from this source</strong>.</div>
+      </li>
+      <li class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-text">Tap <strong>Install</strong>, then tap <strong>Open</strong> and grant <strong>Microphone permission</strong> when prompted to speak aloud.</div>
+      </li>
+    </ul>
+  </div>
+
+  <footer>
+    BolEnglish AI • Built for Hindi and Hinglish learners.
+  </footer>
+
+</div>
+
+</body>
+</html>
